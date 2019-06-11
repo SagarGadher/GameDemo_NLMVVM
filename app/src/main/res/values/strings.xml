@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GameDemo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_play">PLAY</string>
+
+    <string name="word_format">\"%s\"</string>
+    <string name="score_format">Current Score: %d</string>
+    <string name="final_score_format">Final Score: %d</string>
+</resources>

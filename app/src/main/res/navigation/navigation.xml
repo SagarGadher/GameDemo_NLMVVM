@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/titleFragment">
+
+    <fragment
+            android:id="@+id/titleFragment"
+            android:name="com.example.gamedemo.fragment.TitleFragment"
+            android:label="Home"
+            tools:layout="@layout/layout_fragment_title">
+        <action
+                android:id="@+id/action_titleFragment_to_gameFragment"
+                app:destination="@id/gameFragment"
+                app:enterAnim="@anim/anim_slide_in"
+                app:exitAnim="@anim/anim_slide_out"
+                app:popEnterAnim="@anim/anim_silde_in_rev"
+                app:popExitAnim="@anim/anim_slide_out_rev"/>
+    </fragment>
+    <fragment
+            android:id="@+id/gameFragment"
+            android:name="com.example.gamedemo.fragment.GameFragment"
+            android:label="Game"
+    >
+        <action android:id="@+id/action_gameFragment_to_scoreFragment"
+                app:destination="@+id/scoreFragment"
+                app:enterAnim="@anim/anim_slide_in"
+                app:exitAnim="@anim/anim_slide_out"
+                app:popEnterAnim="@anim/anim_silde_in_rev"
+                app:popExitAnim="@anim/anim_slide_out_rev"
+                app:popUpTo="@+id/titleFragment"/>
+    </fragment>
+    <fragment android:id="@+id/scoreFragment" android:name="com.example.gamedemo.fragment.ScoreFragment"
+              android:label="ScoreFragment">
+        <argument android:name="scoreArgs" app:argType="integer"/>
+    </fragment>
+</navigation>
